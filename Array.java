@@ -26,16 +26,47 @@ public class Array {
     // System.out.println("Maximum value: " + arr);
     // System.out.println(arr[n]);
 
-    public static void main(String[] args){
+   
         // problem 4 : sort an array
         // int [] arr = {0,1,2,0,1,2,-1,-2,-3};
-        int [] arr = {0,1,2};
-        int arr2[]={2,3,4,5};
-        arr = Arrays.copyOf(arr, arr.length + arr2.length);
+        // int [] arr = {0,1,2};
+        // int arr2[]={2,3,4,5};
+        // arr = Arrays.copyOf(arr, arr.length + arr2.length);
         
-        // System.out.println(arr);
-        System.arraycopy(arr2, 0, arr, arr.length - arr2.length, arr2.length);
-        System.out.println(Arrays.toString(arr));
+        // // System.out.println(arr);
+        // System.arraycopy(arr2, 0, arr, arr.length - arr2.length, arr2.length);
+        // System.out.println(Arrays.toString(arr));
+         
+ // rotate array by one position
+            // int[] arr = {1, 2, 3, 4, 5};
+            // int n = arr.length;
+            // // int temp = arr[n - 1];
+            // System.out.println(n);
+            // int last = arr[n-1];
+            // for(int i = n-1; i>0;i--){
+            //     arr[i] = arr[i-1];
+                
+            // }
+            // arr[0] = last;
+            // System.out.println(Arrays.toString(arr));
+
+// problem 5 : find the sum of all subarrays
+            // int[] arr = {2,-4,3,5,-1,6,-2,4};
+            // int maxSum = 0;
+            // for(int st=0;st<arr.length;st++){
+            //     int sum = 0;
+            //     for(int end=st;end<arr.length;end++){
+            //         sum+= arr[end];
+            //         maxSum = Math.max(maxSum, sum);
+            //         if(sum < 0){
+            //             sum = 0; // reset sum if it goes negative
+            //         }
+            //     }
+            // }
+            //  System.out.println("Sum of all subarrays: " + maxSum); 
+            
+            public static void main(String[] args){
+            
     }
 }
         
