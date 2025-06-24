@@ -74,38 +74,54 @@ public class Array {
 //         }
 //     }
 //     return largest;
-// }
-public static void prefixSum(int arr[]){
-    int maxSum = Integer.MIN_VALUE;
-     int prefix[] = new int[arr.length];
-     prefix[0] = arr[0];
-     for(int i = 1 ; i<prefix.length; i++){
-         prefix[i] = prefix[i-1] + arr[i];
-     }
-     for(int i = 0; i<arr.length;i++){
-        int curSum = 0;
-        for(int j = i;j<arr.length;j++){
-            int end = j;
-            if(i == 0){
-                curSum = prefix[end];
-            } else {
-                curSum = prefix[end] - prefix[i-1];
-            }
-            if(curSum > maxSum){
-                maxSum = curSum;
-            }
+// // }
+
+// problem 6 : find the maximum subarray sum using prefix sum
+// public static void prefixSum(int arr[]){
+//     int maxSum = Integer.MIN_VALUE;
+//      int prefix[] = new int[arr.length];
+//      prefix[0] = arr[0];
+//      for(int i = 1 ; i<prefix.length; i++){
+//          prefix[i] = prefix[i-1] + arr[i];
+//      }
+//      for(int i = 0; i<arr.length;i++){
+//         int curSum = 0;
+//         for(int j = i;j<arr.length;j++){
+//             int end = j;
+//             if(i == 0){
+//                 curSum = prefix[end];
+//             } else {
+//                 curSum = prefix[end] - prefix[i-1];
+//             }
+//             if(curSum > maxSum){
+//                 maxSum = curSum;
+//             }
             
-        }
+//         }
         
-     }
-        System.out.println("Maximum subarray sum: " + maxSum);
-}
+//      }
+//         System.out.println("Maximum subarray sum: " + maxSum);
+// }
+
+// problem 7 : find the maximum consecutive 1's in an array
+// public static int findConsecutive(int arr[]) {
+//     int count = 0; int  maxCount = 0;
+//     for(int i = 0;i<arr.length;i++){
+//         if(arr[i]== 1 ){
+//             count++;
+//             if(count > maxCount){
+//                 maxCount = count;
+//             }
+//         }else{
+//                 count = 0;
+//             }
+//     }
+//     return maxCount;
+// }
             public static void main(String[] args){
-            int arr[] = {1,5,3,4,2};
+            int arr[] = {1, 0, 1, 1, 0, 1, 1, 1, 0, 1};
            
-               prefixSum(arr);
-            //    System.out.println(Arrays.toString(arr));
-        
+            System.out.println("Maximum consecutive 1's: " + findConsecutive(arr));
     }
 
 }   
