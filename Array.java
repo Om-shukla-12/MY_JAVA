@@ -65,8 +65,21 @@ public class Array {
             // }
             //  System.out.println("Sum of all subarrays: " + maxSum); 
             
+            // largest number from array
+public static int largestNumber(int arr[]) {
+     int largest = 0;  
+    for(int i = 0; i< arr.length;i++){
+        if(arr[i] > largest){
+            largest = arr[i];
+        }
+    }
+    return largest;
+}
             public static void main(String[] args){
-            
+            int arr[] = {1,5,3,4,2};
+           
+               System.out.println(largestNumber(arr));
+        
     }
 }
         
