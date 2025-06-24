@@ -118,10 +118,28 @@ public class Array {
 //     }
 //     return maxCount;
 // }
+
+// problem 8 : move all zeroes to the end of the array
+// public static void moveZeroes(int arr[]) {
+//     int n = arr.length;
+//     // int last= n-1;
+//     int j = 0;
+//     for(int i =0;i< n;i++){
+//         if(arr[i] != 0){
+//             arr[j]= arr[i]; 
+//             j++;
+//         } 
+//     }
+//     while(j<n){
+//         arr[j]=0;
+//         j++;
+//     }
+//     System.out.println(Arrays.toString(arr));
+// }
             public static void main(String[] args){
             int arr[] = {1, 0, 1, 1, 0, 1, 1, 1, 0, 1};
            
-            System.out.println("Maximum consecutive 1's: " + findConsecutive(arr));
+        
     }
 
 }   
