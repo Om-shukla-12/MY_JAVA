@@ -66,21 +66,47 @@ public class Array {
             //  System.out.println("Sum of all subarrays: " + maxSum); 
             
             // largest number from array
-public static int largestNumber(int arr[]) {
-     int largest = 0;  
-    for(int i = 0; i< arr.length;i++){
-        if(arr[i] > largest){
-            largest = arr[i];
+// public static int largestNumber(int arr[]) {
+//      int largest = 0;  
+//     for(int i = 0; i< arr.length;i++){
+//         if(arr[i] > largest){
+//             largest = arr[i];
+//         }
+//     }
+//     return largest;
+// }
+public static void prefixSum(int arr[]){
+    int maxSum = Integer.MIN_VALUE;
+     int prefix[] = new int[arr.length];
+     prefix[0] = arr[0];
+     for(int i = 1 ; i<prefix.length; i++){
+         prefix[i] = prefix[i-1] + arr[i];
+     }
+     for(int i = 0; i<arr.length;i++){
+        int curSum = 0;
+        for(int j = i;j<arr.length;j++){
+            int end = j;
+            if(i == 0){
+                curSum = prefix[end];
+            } else {
+                curSum = prefix[end] - prefix[i-1];
+            }
+            if(curSum > maxSum){
+                maxSum = curSum;
+            }
+            
         }
-    }
-    return largest;
+        
+     }
+        System.out.println("Maximum subarray sum: " + maxSum);
 }
             public static void main(String[] args){
             int arr[] = {1,5,3,4,2};
            
-               System.out.println(largestNumber(arr));
+               prefixSum(arr);
+            //    System.out.println(Arrays.toString(arr));
         
     }
-}
-        
+
+}   
 
