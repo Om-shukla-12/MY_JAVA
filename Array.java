@@ -136,10 +136,28 @@ public class Array {
 //     }
 //     System.out.println(Arrays.toString(arr));
 // }
+
+public static void reverseGroup(int arr[], int k) {
+    for(int i = 0; i< arr.length; i+=k){
+        int left = i;
+        int right = Math.min(i + k - 1, arr.length - 1);
+
+        while(left < right){
+            int temp = arr[left];
+            arr[left]=arr[right];
+            arr[right]=temp;
+            left++;
+            right--;
+        }
+    }
+    // System.out.println(Arrays.toString(arr));
+}
             public static void main(String[] args){
-            int arr[] = {1, 0, 1, 1, 0, 1, 1, 1, 0, 1};
+            int arr[] = {1,2,3,4,5,6,7,8};
            
-        
+        int k = 3;
+        reverseGroup(arr, k);
+        System.out.println(Arrays.toString(arr));
     }
 
 }   
