@@ -152,11 +152,28 @@ public class Array {
 //     }
 //     // System.out.println(Arrays.toString(arr));
 // }
-            public static void main(String[] args){
-            int arr[] = {1,2,3,4,5,6,7,8};
-           
-       
+public static void rotateArray(int arr[], int k) {
+    int n = arr.length;
+    k = k%n; // handle cases where k is greater than n
+    int temp [] = new int [k];
+
+    for(int i = 0;i<k;i++){
+        temp[i]=arr[i];
     }
 
-}   
+    for(int i=k;i<n;i++){
+        arr[i-k]=arr[i];
+    }
+    for(int i = 0;i<k;i++){
+        arr[n - k + i]= temp[i];
+    }
+    System.out.println(Arrays.toString(arr));
+}
+            public static void main(String[] args){
+            int arr[] = {1,2,3,4,5,6,7,8};
+           int k=3;
+           rotateArray(arr, k);
+    }
+
+}
 
