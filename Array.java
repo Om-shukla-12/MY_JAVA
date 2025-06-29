@@ -171,30 +171,54 @@ public class Array {
 // }
 
 // problem 9 : find the minimum difference between the maximum and minimum elements after modifying the array
-public static int getMinDiff(int[] arr, int k) {
-        int n = arr.length;
-        if(n==0 || n==1) return 0;
+// public static int getMinDiff(int[] arr, int k) {
+//         int n = arr.length;
+//         if(n==0 || n==1) return 0;
         
-        Arrays.sort(arr);
-        int result = arr[n-1] - arr[0];
-        int smallest = arr[0] + k;
-        int largest = arr[n-1] - k;
+//         Arrays.sort(arr);
+//         int result = arr[n-1] - arr[0];
+//         int smallest = arr[0] + k;
+//         int largest = arr[n-1] - k;
         
-        for(int i=0; i<n-1; i++) {
-            int min = Math.min(smallest, arr[i+1] - k);
-            int max = Math.max(largest, arr[i] + k);
+//         for(int i=0; i<n-1; i++) {
+//             int min = Math.min(smallest, arr[i+1] - k);
+//             int max = Math.max(largest, arr[i] + k);
             
-            if(min < 0) continue;
+//             if(min < 0) continue;
             
-            result = Math.min(result, max-min);
+//             result = Math.min(result, max-min);
+//         }
+        
+//         return result;
+//     }
+
+// problem 10 : add one to a number represented as an array
+ static int[] addOne(int[] arr) {
+
+       
+        int carry = 1;
+
+        for(int i = arr.length - 1; i >= 0; i--) {
+            int sum = arr[i] + carry;
+            arr[i] = sum % 10;
+            carry = sum / 10;
         }
-        
-        return result;
+
+        if(carry > 0) {
+            int[] newArr = new int[arr.length + 1];
+            newArr[0] = carry;
+            System.arraycopy(arr, 0, newArr, 1, arr.length);
+            return newArr;
+        }
+
+        return arr;
     }
+
             public static void main(String[] args){
             int arr[] = {1,2,3,4,5,6,7,8};
+            
            
-           System.out.println(getMinDiff(arr, 3));
+           
            
     }
 
