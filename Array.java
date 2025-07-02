@@ -214,24 +214,37 @@ public class Array {
 //         return arr;
 //     }
 
-    public static void ptn() {
-        for(int i = 1; i<=10 ; i++){
-            for(int j = 1; j<=i;j++){
+    // public static void ptn() {
+    //     for(int i = 1; i<=10 ; i++){
+    //         for(int j = 1; j<=i;j++){
                 
-                System.out.print("*");
-            }
+    //             System.out.print("*");
+    //         }
         
-             System.out.println(" ");
-        }
+    //          System.out.println(" ");
+    //     }
+    // }
+
+    public  static int buySellStock(int[] prices) {
+          int buyPrice = Integer.MAX_VALUE;
+          int maxProfit = 0;
+
+          for(int i = 0;i< prices.length;i++){
+            if(buyPrice<prices[i]){
+                maxProfit = Math.max(maxProfit, prices[i] - buyPrice);   
+            }else{
+                buyPrice = prices[i];
+            }
+          }
+            System.out.println("Maximum profit: " + maxProfit); 
+            return maxProfit;                                            
     }
 
 
             public static void main(String[] args){
             // int arr[] = {1,2,3,4,5,6,7,8};
-
-           ptn();
-           
-           
+            int [] prices = {7,1,5,3,6,4}; 
+            buySellStock(prices);
     }
 
 }
