@@ -239,12 +239,21 @@ public class Array {
     //         System.out.println("Maximum profit: " + maxProfit); 
     //         return maxProfit;                                            
     // }
-
-
+    public static void repeat(int arr[]) {
+        int n = arr.length;
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+              if(arr[i] == arr[j]){
+                System.out.println("Repeated element: " + arr[i]);
+              }
+        }
+    }
+    }
             public static void main(String[] args){
-            // int arr[] = {1,2,3,4,5,6,7,8};
-            int [] prices = {7,1,5,3,6,4}; 
-            buySellStock(prices);
+            int arr[] = {1,2,1,3,4,2};
+                repeat(arr);
+
+            
     }
 
 }
