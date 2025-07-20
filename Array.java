@@ -275,8 +275,8 @@ public class Array {
     // }
             public static void main(String[] args){
             int arr[] = {1,2,1,3,4,2};
-            ArrayList<Integer> leadersList = leaders(arr);
-            System.out.println("Leaders in the array: " + leadersList);
+            // ArrayList<Integer> leadersList = leaders(arr);
+            // System.out.println("Leaders in the array: " + leadersList);
 
             
     }
