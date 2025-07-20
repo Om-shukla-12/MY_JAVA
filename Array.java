@@ -1,6 +1,5 @@
 // import java.util.Arrays;
 
-import java.util.ArrayList;
 
 public class Array {
 
@@ -274,7 +273,7 @@ public class Array {
     //     return result;
     // }
             public static void main(String[] args){
-            int arr[] = {1,2,1,3,4,2};
+            // int arr[] = {1,2,1,3,4,2};
             // ArrayList<Integer> leadersList = leaders(arr);
             // System.out.println("Leaders in the array: " + leadersList);
 
