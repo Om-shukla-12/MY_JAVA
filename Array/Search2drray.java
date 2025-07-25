@@ -1,3 +1,4 @@
+package Array;
 import java.util.Scanner;
 public class Search2drray{
     public static void main(String[] args){

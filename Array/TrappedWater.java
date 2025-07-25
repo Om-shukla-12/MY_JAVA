@@ -1,3 +1,4 @@
+package Array;
 public class TrappedWater {
     
     public static int trappedWater(int arr[]){
