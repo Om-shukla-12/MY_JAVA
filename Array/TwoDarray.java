@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class TwoDarray {
 
     public static void main(String args[]){
@@ -11,7 +10,7 @@ public class TwoDarray {
          int arr[][]= new int[rows][cols];
          for(int i=0;i<rows;i++){
             for(int j=0;j<cols;j++){
-                arr[i][j]= sc.nextInt();
+                arr[i][j] = sc.nextInt();
             }
             // System.out.println();
          }
