@@ -16,5 +16,6 @@ public class EmailtoUsename {
         }
     }
     System.out.println(username);
+    sc.close();
 }
 }
