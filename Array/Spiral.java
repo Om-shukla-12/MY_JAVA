@@ -1,15 +1,25 @@
+package Array;
+
 public class Spiral {
-    public static void main(String args[]){
-        int [][] arr = {
-            {1, 2, 3, 4},
-            {5, 6, 7, 8},
-            {9, 10, 11, 12}
-        };
-        for(int i = 0;i<arr.length;i++){
-            for(int j=0;j<arr[i].length;j++){
-                System.out.print(arr[i][j] + " ");
-            }
-            System.out.println();
+
+       public static void main(String[] args) {
+         String ch = "Hello, World!";
+    ch = ch.toLowerCase();
+    int [] count = new int[26];
+
+    //  to find repeated letter
+    for(int i =0;i<ch.length();i++){
+        char curchar = ch.charAt(i);
+        if(curchar>='a' && curchar<='z'){
+            count[curchar-'a']++;
         }
+    }
+
+    for(int i=0;i<26;i++){
+        if(count[i]>1){
+            System.out.println((char)(i+'a') + " is repeated " + count[i] + " times.");
+        }
+    }
+
     }
 }
